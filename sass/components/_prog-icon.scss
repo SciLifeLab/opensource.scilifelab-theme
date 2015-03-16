@@ -1,3 +1,5 @@
+$prog-icon-size: 48px;
+
 .prog-lang-list {
   @include display(flex);
 
@@ -17,6 +19,7 @@
   background-color: #7DC030;
   cursor: default;
 
+  min-width: $prog-icon-size;
   padding: .5rem;
   margin-right: 1rem;
 
@@ -28,10 +31,10 @@
 
 %prog-icon-common {
   color: rgba(#000, 0);
-  width: 48px;
-  height: 48px;
+  width: $prog-icon-size;
+  height: $prog-icon-size;
 
-  background-size: auto 48px;
+  background-size: auto $prog-icon-size;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -88,4 +91,14 @@
 .r {
   @extend %prog-icon-common;
   background-image: url('img/languages/r.png');
+}
+
+.ruby {
+  @extend %prog-icon-common;
+  background-image: url('img/languages/ruby.svg');
+}
+
+.scala {
+  @extend %prog-icon-common;
+  background-image: url('img/languages/scala.svg');
 }
